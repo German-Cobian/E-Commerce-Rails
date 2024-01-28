@@ -1,4 +1,11 @@
 <div id="<%= dom_id product %>">
+
+  <% if product.images.any? %>
+    <% product.images.each do |image| %>
+      <%= image_tag image, class: "x-20 h-20 object-cover rounded-md" %>
+    <% end %>
+  <% end %>
+
   <p class="my-5">
     <strong class="block font-medium mb-1">Name:</strong>
     <%= product.name %>
