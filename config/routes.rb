@@ -1,12 +1,6 @@
 Rails.application.routes.draw do
-  namespace :admin do
-    resources :categories
-    resources :products do
-      resources :stocks
-    end
-  end
-  devise_for :admins
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  devise_for :admins
 
   root "home#index"
 
@@ -15,4 +9,13 @@ Rails.application.routes.draw do
   end
 
   get "admin" => "admin#index"
+
+  namespace :admin do
+    resources :categories
+    resources :products do
+      resources :stocks
+      resources :orders
+    end
+  end
+  
 end
