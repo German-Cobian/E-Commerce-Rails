@@ -3,7 +3,7 @@ class CreateAdminOrders < ActiveRecord::Migration[7.0]
     create_table :orders do |t|
       t.string :customer_email
       t.string :address
-      t.boolean :fulfilled
+      t.boolean :fulfilled, default: false
       t.integer :total
 
       t.timestamps
