@@ -51,7 +51,8 @@ class Admin::ProductsController < AdminController
 
   # DELETE /admin/products/1 or /admin/products/1.json
   def destroy
-    @admin_product.destroy
+    @admin_product = Product.find(params[:id])
+    @admin_product.destroy!
 
     respond_to do |format|
       format.html { redirect_to admin_products_url, notice: "Product was successfully destroyed." }
