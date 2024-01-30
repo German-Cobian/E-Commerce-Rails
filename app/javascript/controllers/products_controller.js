@@ -18,6 +18,7 @@ export default class extends Controller {
         cartArray.push ({
           id: this.productValue.id,
           name: this.productValue.name,
+          price: this.productValue.price,
           size: this.sizeValue,
           quantity: 1
         })
