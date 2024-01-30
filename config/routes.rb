@@ -19,4 +19,5 @@ Rails.application.routes.draw do
   end
   
   resources :categories, only: [:show]
+  resources :products, only: [:show]
 end
