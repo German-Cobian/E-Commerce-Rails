@@ -66,7 +66,7 @@ export default class extends Controller {
         "X-CSRF-Token": csrfToken
       },
       body: JSON.stringify(payload)
-    }).then(response => {
+      }).then(response => {
         if (response.ok) {
           response.json().then(body => {
             window.location.href = body.url
@@ -79,7 +79,7 @@ export default class extends Controller {
             errorContainer.appendChild(errorEl)
           })
         }
-      })
+    })
   }
 }
 
