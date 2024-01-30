@@ -18,5 +18,5 @@ Rails.application.routes.draw do
     resources :orders
   end
   
-  get "category" => "category#index"
+  resources :categories, only: [:show]
 end
