@@ -13,19 +13,31 @@ export default class extends Controller {
       const item = cart[i]
       total += item.price * item.quantity
       const div = document.createElement("div")
-      div.classList.add("mt-2")
-      div.innerText = `Item: ${item.name} - $${item.price/100.0} - Size: ${item.size} - Quantity: ${item.quantity}`
+      div.classList.add("mt-2", "ms-12")
+      const nameEl = document.createElement("p")
+      nameEl.innerText =  `Item: ${item.name}`
+      nameEl.classList.add("me-5")
+      const priceEl = document.createElement("p")
+      priceEl.innerText =  `Price per Unit: $${item.price/100.0} `
+      const sizeEl = document.createElement("p")
+      sizeEl.innerText = `Size: ${item.size}`
+      const quantityEl = document.createElement("p")
+      quantityEl.innerText = `Quantity: ${item.quantity}`
       const deleteButton = document.createElement("button")
       deleteButton.innerText = "Remove"
-      console.log("item.id: ", item.id)
       deleteButton.value = JSON.stringify({id: item.id, size: item.size})
-      deleteButton.classList.add("bg-gray-500", "rounded", "text-white", "px-2", "py-1", "ml-2")
+      deleteButton.classList.add("bg-gray-500", "rounded", "text-white", "my-4", "ml-12", "px-2", "py-1")
       deleteButton.addEventListener("click", this.removeFromCart)
+      div.appendChild(nameEl)
+      div.appendChild(priceEl)
+      div.appendChild(sizeEl)
+      div.appendChild(quantityEl)
       div.appendChild(deleteButton)
       this.element.prepend(div)
     }
 
     const totalEl = document.createElement("div")
+    totalEl.classList.add("my-6", "ms-12")
     totalEl.innerText= `Total: $${total/100.0}`
     let totalContainer = document.getElementById("total")
     totalContainer.appendChild(totalEl)
@@ -50,7 +62,6 @@ export default class extends Controller {
   }
 
   checkout() {
-    console.log("checkout")
     const cart = JSON.parse(localStorage.getItem("cart"))
     const payload = {
       authenticity_token: "",

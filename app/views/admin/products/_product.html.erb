@@ -2,7 +2,7 @@
 
   <% if product.images.any? %>
     <% product.images.each do |image| %>
-      <%= image_tag image, class: "x-20 h-20 object-cover rounded-md" %>
+      <%= product.images.any? ? image_tag(product.images.first.variant(:large)) : image_tag("https://via.placeholder.com/200") %>
     <% end %>
   <% end %>
 
