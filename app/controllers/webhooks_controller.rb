@@ -2,7 +2,7 @@ class WebhooksController < ApplicationController
   skip_forgery_protection
 
   def stripe
-    stripe_secret_key = Rails.application.credentials.dig(:stripe, :secret)
+    stripe_secret_key = Rails.application.credentials.dig(:stripe, :secret_key)
     Stripe.api_key = stripe_secret_key
     payload = request.body.read
     sig_header = request.env["HTTP_STRIPE_SIGNATURE"]
