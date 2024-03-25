@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
   def index
-    @main_categories = Category.take(4)
+    @categories = Category.all
   end
 end

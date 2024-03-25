@@ -17,8 +17,9 @@
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Price:</strong>
-    <%= product.price %>
+    <strong class="block font-medium mb-1">Price:</strong>$
+    <%= (product.price/100.0).to_s  %>
+   
   </p>
 
   <p class="my-5">

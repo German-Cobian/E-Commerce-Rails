@@ -49,7 +49,7 @@
                     <%= o.address %>
                   </td>
                   <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">
-                    <%= o.total %>
+                    $<%= (o.total/100.0).to_s %>
                   </td>
                 </tr>
               <% end %>
@@ -101,7 +101,7 @@
                     <%= o.address %>
                   </td>
                   <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">
-                    <%= o.total %>
+                    $<%= (o.total/100.0).to_s %>
                   </td>
                 </tr>
               <% end %>
