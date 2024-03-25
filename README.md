@@ -1,20 +1,20 @@
 # E-Commerce-Rails
 
- A Ruby on Rails app that functions as a store (specifically a clothing store). The app handles all the basic aspects of the buying/selling transactions. The store administrators can create /edit and eliminate product-categories, product-items, and product-stocks. They can browse orders placed and change their status as they are processed. The Users can browse product-categories, product-items, place product-items in thier cart, and checkout once they decide their cart is full. Payments are processed via Stripe.
+ A Ruby on Rails app that functions as a store (specifically a clothing store). The app handles all the basic aspects of the buying/selling transactions. The store administrators can create/edit and eliminate product-categories, product-items, and product-stocks. They can browse orders placed and change their status as they are processed. The Users can browse product-categories, product-items, place product-items in their cart, and checkout once they decide their cart is full. Payments are processed via Stripe.
 
 * Admin Privileges:
 
-  - Create, edit and destroy Categories into which products can be classified and managed. The Category includes a description and an image to represent it.
+  - Create, edit and destroy Categories into which products can be classified and managed. Categories include a description and an image to represent them.
 
   ![Categories](app/assets/images/demo/categories.jpeg?raw=true "Categories")
 
-  - Create, edit and destroy Products, the articles offered by the store. The Product includes a description, the price, and an image to represent it. The admin can change the status of a Product from "active" to "inactive" when it is needful to withdraw it from offer.
+  - Create, edit and destroy Products -the articles offered by the store. Products include a description, the price, and an image to represent them. The admin can change the status of a Product from "active" to "inactive" when it is needful to withdraw it from offer.
 
   ![Products](app/assets/images/demo/products.jpeg?raw=true "Products")
 
-  - Create, edit and destroy Stocks, the inventory of the specific items offered. Besides the amount in existence, Stocks specifies a "size" property for the product (since the store deals in clothing items).
+  - Create, edit and destroy Stocks -the inventory of the specific items offered. Besides the amount in existence, Stocks specifies a "size" property for the product (since the store deals in clothing items).
 
-  ![Stocks](app/assets/images/demo/stocks.jpeg?raw=true "Stocks")
+  ![Stocks](app/assets/images/demo/stock.jpeg?raw=true "Stocks")
 
   - Browse Orders that have been placed, with the customer's name, e-mail and address, separated into unfulfilled and fulfilled Orders. The admin can edit the Order to change it's status from "fulfilled" to "fulfilled" as processing goes forward.
 
@@ -35,17 +35,15 @@
 
  ![Category](app/assets/images/demo/category.jpeg?raw=true "Category")
 
-  - The User can select a specific Product to browse, he/she is then taken to a page where the larger and multiple images of the Product are displayed, a description, the sizes in which it is offered, and the price. If the User has decided to purchase the Product, he/she can select the specific size, and then add the item to the cart. 
+  - The User can select a specific Product to browse, he/she is then taken to a page where larger  images of the Product are displayed (one or many of them), a description, the sizes in which the Product is offered, and the price. If the User has decided to purchase the Product, he/she can select the specific size, and then add the item to the cart. 
 
   ![Product](app/assets/images/demo/product.jpeg?raw=true "Product")
 
-  - After the user has picked the first item to ad to the cart, they proceed immediately to the cart, or they can continue browsing other products in the present category or other categories, and, when satisfied, proceed to view the sum of items on their cart.
-
-  - At the cart, the user can see the items he/she has chose to buy, their price per unit, the quantity of each, the size of each, the total for the entirety of the order. The User is given the choice to remove individual items from the cart, to clear the cart in it's entirety, or to checkout.
+  - After the User has picked the first item to ad to the cart, they can proceed immediately to the cart, or they can continue browsing other products in the present category or other categories, and, when satisfied, proceed to view the sum of items on their cart. At the cart, the user can see the items he/she has chosen to buy, their price per unit, the quantity of each, the size of each, and the total for the entirety of the order. The User is given the choice to remove individual items from the cart, to clear the cart in it's entirety, or to checkout.
 
   ![Cart](app/assets/images/demo/cart.jpeg?raw=true "Cart")
 
-  - When the user clicks "checkout" they are taken to the Stripe checkout page where they fill in all their information for payment and delivery purposes. They can then click on "Buy". If the operation is successful, they are notified that their puerchse was completed.
+  - When the user clicks "checkout" they are taken to the Stripe checkout page where they fill-in all their information for payment and delivery purposes. They can then click on "Pay". If the operation is successful, they are notified that their purchase was completed.
 
   ![Checkout](app/assets/images/demo/checkout.jpeg?raw=true "Checkout")
 
