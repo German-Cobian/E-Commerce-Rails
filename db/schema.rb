@@ -70,6 +70,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_29_013931) do
   end
 
   create_table "orders", force: :cascade do |t|
+    t.string "customer_name"
     t.string "customer_email"
     t.string "address"
     t.boolean "fulfilled", default: false

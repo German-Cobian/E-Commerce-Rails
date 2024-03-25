@@ -20,6 +20,9 @@
                   Order Id
                 </th>
                 <th scope="col" class="text-sm font-medium text-gray-800 px-6 px-4 text-left">
+                  Customer Name
+                </th>
+                <th scope="col" class="text-sm font-medium text-gray-800 px-6 px-4 text-left">
                   Customer Email
                 </th>
                 <th scope="col" class="text-sm font-medium text-gray-800 px-6 px-4 text-left">
@@ -35,6 +38,9 @@
                 <tr class="bg-gray-50 border-b">
                   <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 underline">
                     <%= link_to o.id, [:admin, o], class: 'underline'%>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">
+                    <%= o.customer_name %>
                   </td>
                   <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">
                     <%= o.customer_email %>
@@ -66,6 +72,9 @@
                   Order Id
                 </th>
                 <th scope="col" class="text-sm font-medium text-gray-800 px-6 px-4 text-left">
+                  Customer Name
+                </th>
+                <th scope="col" class="text-sm font-medium text-gray-800 px-6 px-4 text-left">
                   Customer Email
                 </th>
                 <th scope="col" class="text-sm font-medium text-gray-800 px-6 px-4 text-left">
@@ -81,6 +90,9 @@
                 <tr class="bg-gray-50 border-b">
                   <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 underline">
                     <%= link_to o.id, [:admin, o], class: 'underline'%>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">
+                    <%= o.customer_name %>
                   </td>
                   <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">
                     <%= o.customer_email %>
