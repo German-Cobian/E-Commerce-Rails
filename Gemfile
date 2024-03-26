@@ -79,3 +79,6 @@ gem "devise", "~> 4.9"
 
 # Icons & fonts gem
 gem "font-awesome-sass", "~> 6.5.1"
+
+# Payments gem
+gem "stripe", "~> 10.6"

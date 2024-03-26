@@ -1,7 +1,7 @@
 <div id="<%= dom_id category %>">
 
   <div class="my-5">
-    <%= category.image.present? ? image_tag(category.image, height: 100, width: 100) : image_tag("https://via.placeholder.com/50")%>
+    <%= category.image.present? ? image_tag(category.image.variant(:large)) : image_tag("https://via.placeholder.com/50") %>
   </div>
 
   <p class="my-5">

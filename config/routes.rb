@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  
+   # Admin routes
+  
   devise_for :admins
 
-  root "home#index"
-
-  authenticated :admin_user do
+  authenticated :admin do
     root to: "admin#index", as: :admin_root
   end
 
@@ -17,5 +18,17 @@ Rails.application.routes.draw do
     end
     resources :orders
   end
+
+   # Regular user routes
   
+  root "home#index"
+
+  resources :categories, only: [:show]
+  resources :products, only: [:show]
+
+  get "cart" => "carts#show"
+  post "checkout" => "checkouts#create"
+  get "success" => "checkouts#success"
+  get "cancel" => "checkouts#cancel"
+  post "webhooks" => "webhooks#stripe"
 end
